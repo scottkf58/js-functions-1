@@ -97,15 +97,18 @@
  * @return {number} the result
  */
  function calculate(operation, x, y){
-  if(add(x, y)){
-    console.log(x + " + " + y + " = " + result);
-    return result;
-  }else if(subtract(x, y)){
-    console.log(x + " - " + y + " = " + result);
-  }else if(multiply(x, y)){
-    console.log(x + " * " + y + " = " + result);
-  }else if(divide(x, y)){
-    console.log(x + " / " + y + " = " + result);
+  if(operation === "add"){
+    console.log(x + " + " + y + " = " + (x + y));
+    return add(x, y);
+  }else if(operation === "subtract"){
+    console.log(x + " - " + y + " = " + (x - y));
+    return subtract(x, y);
+  }else if(operation === "multiply"){
+    console.log(x + " * " + y + " = " + (x * y));
+    return multiply(x, y);
+  }else if(operation === "divide"){
+    console.log(x + " / " + y + " = " + (x / y));
+    return divide(x, y)
   }
  }
 
